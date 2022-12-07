@@ -78,7 +78,7 @@ class BitcoindRPCWrapper(BlockchainDataWrapper):
                             'f11d5fac'),
                     'reqSigs': 1,
                     'type': 'pubkey',
-                    'addresses': ['1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa']
+                    'address': '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa'
                 }
             }
         ]
@@ -163,12 +163,12 @@ class BitcoindRPCWrapper(BlockchainDataWrapper):
 
         if('vout' in prev_tx and len(prev_tx['vout']) > output_index and
            'scriptPubKey' in prev_tx['vout'][output_index]):
-            if 'addresses' not in prev_tx['vout'][output_index]['scriptPubKey']:
+            if 'address' not in prev_tx['vout'][output_index]['scriptPubKey']:
                 raise PrevOutAddressCannotBeDecodedError(
                     "Can't decode address for txo {0}:{1}".format(prev_txid,
                                                                   output_index))
             else:
-                return ' '.join(prev_tx['vout'][output_index]['scriptPubKey']['addresses'])
+                return prev_tx['vout'][output_index]['scriptPubKey']['address']
         else:
             raise PrevOutAddressCannotBeDecodedError(
                 ("Missing element for vout in get_output_address() with tx "
@@ -282,7 +282,7 @@ def _rpc_to_bci_output(rpc_output):
     bci_output = dict()
     bci_output['tx_index'] = None
     bci_output['n'] = rpc_output['n']
-    bci_output['addr'] = ' '.join(rpc_output['scriptPubKey']['addresses'])
+    bci_output['addr'] = rpc_output['scriptPubKey']['address']
     bci_output['script'] = rpc_output['scriptPubKey']['hex']
     bci_output['value'] = _float_to_satoshi(rpc_output['value'])
     return bci_output
