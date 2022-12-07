@@ -10,7 +10,7 @@ For a description of the metrics :
 
 - Bitcoin Transactions & Privacy (part 3) : https://gist.github.com/LaurentMT/e8644d5bc903f02613c6
 
-Boltzmann is also available for Java: https://github.com/Samourai-Wallet/efficiency-score
+Boltzmann is also available for Java: https://code.samourai.io/wallet/boltzmann-java
 
 
 ## Python versions
@@ -33,7 +33,7 @@ Python 3.3.3
 
 Manual installation
 ```
-Gets the library from Github : https://github.com/Samourai-Wallet/boltzmann/archive/master.zip
+Gets the library from Github : https://code.samourai.io/oxt/boltzmann/-/archive/master/boltzmann-master.zip
 Unzips the archive in a temp directory
 python setup.py install
 ```
