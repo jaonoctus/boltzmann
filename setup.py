@@ -13,7 +13,7 @@ class build_ext(_build_ext):
 setup(
     name='boltzmann',
     packages=find_packages(),
-    version='0.0.1',
+    version='0.0.2',
     description='A python script computing the entropy of Bitcoin transactions and the linkability of their inputs and outputs',
     author='laurentmt',
     author_email='llll@lll.com',
