@@ -50,6 +50,8 @@ python ludwig.py [--rpc] [--duration=600] [--maxnbtxos=12] [--cjmaxfeeratio=0] [
 
 [-T OR --testnet] = Use testnet3 as source of blockchain data
 
+[-b OR --blockstream] = Use Blockstream as source of blockchain data
+
 [-d OR --duration] = Maximum number of seconds allocated to the processing of a single transaction.
                      Default value is 600 seconds.
 
@@ -83,7 +85,7 @@ MERGE_OUTPUTS option is still a work in progress. Results are not always reliabl
 
 MERGE_FEES should only be used if it is known with certainty that all mining fees were paid by a single partificant to the transaction. Not recommended to use, especillay in the case of Stonewall/Stonewallx2 transactions.
 
-If your request is returning no response and you only see "DEBUG: Using remote blockchain.info API" make sure you are typing the commands correctly. 
+If your request is returning no response and you only see "DEBUG: Using remote blockchain.info API" make sure you are typing the commands correctly.
 
 ## Data Sources
 
@@ -109,7 +111,7 @@ txindex=1
 ```
 
 ## Contributors
-@LaurentMT 
+@LaurentMT
 @kristovatlas
 @SamouraiDev
 
